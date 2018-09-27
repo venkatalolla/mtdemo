@@ -14,6 +14,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+@Category(UnitTest.class)
 public class TaskResourceTest {
 
 	private static final String CHROME_PATH = "/usr/bin/chromedriver";
