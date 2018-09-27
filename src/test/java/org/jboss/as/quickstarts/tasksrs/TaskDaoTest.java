@@ -44,11 +44,11 @@ import org.junit.runner.RunWith;
 @Category(IntegrationTest.class)
 public class TaskDaoTest {
 
-    @Deployment
+    /*@Deployment
     public static WebArchive deployment() throws IllegalArgumentException, FileNotFoundException {
         return new DefaultDeployment().withPersistence().withImportedData().getArchive()
                 .addClasses(Resources.class, User.class, UserDao.class, Task.class, TaskDao.class, TaskDaoImpl.class);
-    }
+    }*/
 
     @Inject
     private EntityManager em;
