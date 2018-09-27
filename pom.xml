@@ -43,7 +43,7 @@
         <version.jboss.bom.eap>6.4.0.GA</version.jboss.bom.eap>
 
         <!-- other plugin versions -->
-        <version.surefire.plugin>2.19.1</version.surefire.plugin>
+        <version.surefire.plugin>2.22.0</version.surefire.plugin>
         <version.war.plugin>2.1.1</version.war.plugin>
 
         <!-- maven-compiler-plugin -->
@@ -157,17 +157,16 @@
         <dependency>
         	<groupId>org.seleniumhq.selenium</groupId>
         	<artifactId>selenium-java</artifactId>
-        	<version>3.14.0</version>
-        </dependency>
+        	</dependency>
         <dependency>
         	<groupId>org.seleniumhq.selenium</groupId>
         	<artifactId>selenium-server</artifactId>
-        	<version>3.14.0</version>
         </dependency>
         <dependency>
         	<groupId>org.testng</groupId>
         	<artifactId>testng</artifactId>
         	<version>6.14.3</version>
+        	<scope>test</scope>
         </dependency>
         <dependency>
         	<groupId>org.jboss.as</groupId>
@@ -194,6 +193,12 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${version.surefire.plugin}</version>
+	                <configuration>
+						<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+				    </configuration>
             </plugin>
             <!-- The JBoss AS plugin deploys your war to a local JBoss EAP container -->
             <!-- To use, run: mvn package jboss-as:deploy -->
@@ -244,6 +249,10 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <groups>org.jboss.as.quickstarts.tasksrs.category.UnitTest</groups>
+								<suiteXmlFiles>
+								<!-- TestNG suite XML files -->
+									<suiteXmlFile>testng.xml</suiteXmlFile>
+								</suiteXmlFiles>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -257,6 +266,10 @@
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
+							<suiteXmlFiles>
+							<!-- TestNG suite XML files -->
+								<suiteXmlFile>testng.xml</suiteXmlFile>
+							</suiteXmlFiles>
                             <groups>org.jboss.as.quickstarts.tasksrs.category.IntegrationTest</groups>
                         </configuration>
                     </plugin>

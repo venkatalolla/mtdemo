@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 public class AppTest {
 
 	private static final String CHROME_PATH = "/usr/bin/chromedriver";
+	//private static final String CHROME_PATH = "/Users/suryalolla/Documents/GitHub/openshift-tasks/chromedriver";
 	private static ChromeDriverService service;
 	private WebDriver driver;
 	String appURL = "http://tasks-tasks-dev.oseapps.levvel-labs.io/";
