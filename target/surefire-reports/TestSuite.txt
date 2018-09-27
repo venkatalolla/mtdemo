@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.694 sec - in TestSuite
+Tests run: 14, Failures: 2, Errors: 0, Skipped: 9, Time elapsed: 22.871 sec <<< FAILURE! - in TestSuite
+null on org.jboss.as.quickstarts.tasksrs.UserDaoTest(org.jboss.as.quickstarts.tasksrs.UserDaoTest)  Time elapsed: 11.883 sec  <<< FAILURE!
+org.jboss.arquillian.container.spi.client.container.DeploymentException: Cannot deploy: test.war
+Caused by: java.net.ConnectException: JBAS012144: Could not connect to remote://127.0.0.1:9999. The connection timed out
+
+null on org.jboss.as.quickstarts.tasksrs.TaskDaoTest(org.jboss.as.quickstarts.tasksrs.TaskDaoTest)  Time elapsed: 21.947 sec  <<< FAILURE!
+org.jboss.arquillian.container.spi.client.container.DeploymentException: Cannot deploy: test.war
+Caused by: java.net.ConnectException: JBAS012144: Could not connect to remote://127.0.0.1:9999. The connection timed out
+
