@@ -45,5 +45,5 @@ REST Endpoints on OpenShift..,.
 * Generate CPU load. Last parameter is duration of load in seconds.
 
   ```
-  curl -X GET http://tasks-dev.10.1.2.10.xip.io/demo/load/5 # 5 seconds
+  curl -X GET http://tasks-dev.10.1.2.10.xip.io/demo/load/5 # 5 seconds.
   ```
