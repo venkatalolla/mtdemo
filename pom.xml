@@ -193,12 +193,6 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${version.surefire.plugin}</version>
-	                <configuration>
-						<suiteXmlFiles>
-						<!-- TestNG suite XML files -->
-							<suiteXmlFile>testng.xml</suiteXmlFile>
-						</suiteXmlFiles>
-				    </configuration>
             </plugin>
             <!-- The JBoss AS plugin deploys your war to a local JBoss EAP container -->
             <!-- To use, run: mvn package jboss-as:deploy -->
@@ -249,10 +243,6 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <groups>org.jboss.as.quickstarts.tasksrs.category.UnitTest</groups>
-								<suiteXmlFiles>
-								<!-- TestNG suite XML files -->
-									<suiteXmlFile>testng.xml</suiteXmlFile>
-								</suiteXmlFiles>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -266,10 +256,6 @@
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
-							<suiteXmlFiles>
-							<!-- TestNG suite XML files -->
-								<suiteXmlFile>testng.xml</suiteXmlFile>
-							</suiteXmlFiles>
                             <groups>org.jboss.as.quickstarts.tasksrs.category.IntegrationTest</groups>
                         </configuration>
                     </plugin>
