@@ -42,8 +42,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 @Category(UnitTest.class)
 public class AppTest {
 	
-	//private static final String CHROME_PATH = "/usr/bin/chromedriver";
-		private static final String CHROME_PATH = "/Users/suryalolla/Documents/GitHub/openshift-tasks/chromedriver";
+	        private static final String CHROME_PATH = "/usr/bin/chromedriver";
+		//private static final String CHROME_PATH = "/Users/suryalolla/Documents/GitHub/openshift-tasks/chromedriver";
 		private static ChromeDriverService service;
 		private WebDriver driver;
 		String appURL = "http://tasks-tasks-dev.oseapps.levvel-labs.io/";
@@ -111,9 +111,9 @@ public class AppTest {
 		}	
 		
 		ChromeOptions chromeOptions = new ChromeOptions();
-		//chromeOptions.addArguments("--headless");
-		//chromeOptions.addArguments("--no-sandbox");
-		//chromeOptions.addArguments("--disable-dev-shm-usage");
+		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--no-sandbox");
+		chromeOptions.addArguments("--disable-dev-shm-usage");
 		driver = new ChromeDriver(service, chromeOptions);
 		
 		driver.navigate().to(appURL);
