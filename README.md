@@ -2,7 +2,7 @@ OpenShift Tasks: JAX-RS, JPA quickstart
 ==============================
 [![Jenkins](https://circleci.com/gh/OpenShiftDemos/openshift-tasks.svg?&style=shield&circle-token=1462d2d99334a912b32f758616eb39f6390a200b)](https://circleci.com/gh/OpenShiftDemos/openshift-tasks)
 
-What does this application do right now???????
+What does this application do right now???????//
 ----------------------------------------
 a
 The `tasks-rs` quickstart demonstrates how to implement a JAX-RS service that uses JPA 2.0 persistence deployed to Red Hat JBoss Enterprise Application Platform....
@@ -14,7 +14,7 @@ _Note_: This quickstart uses the H2 database included with Red Hat JBoss Enterpr
 _Note_: This quickstart uses a `*-ds.xml` datasource configuration file for convenience and ease of database configuration. These files are deprecated in JBoss EAP 6.4 and should not be used in a production environment. Instead, you should configure the datasource using the Management CLI or Management Console. Datasource configuration is documented in the [Administration and Configuration Guide](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/) for Red Hat JBoss Enterprise Application Platform._
 
 
-REST Endpoints on OpenShift..,.
+REST Endpoints on OpenShift..,..
 -------------------
 
 * Create task...
