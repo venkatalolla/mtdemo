@@ -64,7 +64,7 @@ public class TaskDaoTest {
         detachedUser.setId(1L);
     }
 
-    @Test
+    /*@Test
     @InSequence(1)
     public void user_should_be_created_with_one_task_attached() throws Exception {
         // given
@@ -134,5 +134,5 @@ public class TaskDaoTest {
 
         // then
         assertEquals(1, taskDao.getAll(detachedUser).size());
-    }
+    }*/
 }
