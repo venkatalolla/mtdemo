@@ -2,7 +2,7 @@ OpenShift Tasks: JAX-RS, JPA quickstart
 ==============================
 [![Jenkins](https://circleci.com/gh/OpenShiftDemos/openshift-tasks.svg?&style=shield&circle-token=1462d2d99334a912b32f758616eb39f6390a200b)](https://circleci.com/gh/OpenShiftDemos/openshift-tasks)
 
-What does this application do right now?
+What does this application do right now??
 ----------------------------------------
 a
 The `tasks-rs` quickstart demonstrates how to implement a JAX-RS service that uses JPA 2.0 persistence deployed to Red Hat JBoss Enterprise Application Platform.
