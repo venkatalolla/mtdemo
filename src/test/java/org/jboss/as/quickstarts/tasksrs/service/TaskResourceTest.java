@@ -76,7 +76,7 @@ public class TaskResourceTest {
     }
     
     
-	@Test
+	/*@Test
 	public void createTaskWithNewUser() {
 		taskResource.createTask(uriInfo, securityContext, "run a demo!");
 		
@@ -108,7 +108,7 @@ public class TaskResourceTest {
 		verify(taskDao).getAll(any(User.class));
 		verify(taskDao).deleteTask(any(Task.class));
 
-	}
+	}*/
 	
 	private Task newTask(Long id) {
 		Task task = new Task("Task 1");
