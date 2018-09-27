@@ -14,7 +14,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class AppTest {
+public class TaskResourceTest {
 
 	private static final String CHROME_PATH = "/usr/bin/chromedriver";
 	//private static final String CHROME_PATH = "/Users/suryalolla/Documents/GitHub/openshift-tasks/chromedriver";
