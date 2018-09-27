@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" ignored="0" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="1244" started-at="2018-09-27T00:40:30Z" finished-at="2018-09-27T00:40:31Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="1244" started-at="2018-09-27T00:40:30Z" finished-at="2018-09-27T00:40:31Z">
+      <class name="org.jboss.as.quickstarts.tasksrs.service.UserResourceTest">
+        <test-method status="SKIP" signature="getUsersSortedByTask()" name="getUsersSortedByTask" duration-ms="0" started-at="2018-09-27T00:40:31Z" finished-at="2018-09-27T00:40:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUsersSortedByTask -->
+      </class> <!-- org.jboss.as.quickstarts.tasksrs.service.UserResourceTest -->
+      <class name="org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest">
+        <test-method status="PASS" signature="getTaskByIdWithNonExistingUser()" name="getTaskByIdWithNonExistingUser" duration-ms="639" started-at="2018-09-27T00:40:31Z" finished-at="2018-09-27T00:40:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTaskByIdWithNonExistingUser -->
+        <test-method status="PASS" signature="createTaskWithNewUser()" name="createTaskWithNewUser" duration-ms="635" started-at="2018-09-27T00:40:31Z" finished-at="2018-09-27T00:40:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTaskWithNewUser -->
+        <test-method status="PASS" signature="deleteTaskById()" name="deleteTaskById" duration-ms="642" started-at="2018-09-27T00:40:31Z" finished-at="2018-09-27T00:40:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTaskById -->
+      </class> <!-- org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
