@@ -17,7 +17,7 @@ _Note_: This quickstart uses a `*-ds.xml` datasource configuration file for conv
 REST Endpoints on OpenShift
 -------------------
 
-* Create task
+* Create task.
 
   ```
   curl -i -u 'redhat:redhat1!' -H "Content-Length: 0" -X POST http://tasks-dev.10.1.2.10.xip.io/ws/tasks/task1
