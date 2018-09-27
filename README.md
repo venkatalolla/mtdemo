@@ -14,7 +14,7 @@ _Note_: This quickstart uses the H2 database included with Red Hat JBoss Enterpr
 _Note_: This quickstart uses a `*-ds.xml` datasource configuration file for convenience and ease of database configuration. These files are deprecated in JBoss EAP 6.4 and should not be used in a production environment. Instead, you should configure the datasource using the Management CLI or Management Console. Datasource configuration is documented in the [Administration and Configuration Guide](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/) for Red Hat JBoss Enterprise Application Platform._
 
 
-REST Endpoints on OpenShift..,
+REST Endpoints on OpenShift..,.
 -------------------
 
 * Create task...
