@@ -42,9 +42,8 @@ REST Endpoints on OpenShift
   curl -i -u 'redhat:redhat1!' -X DELETE http://tasks-dev.10.1.2.10.xip.io/ws/tasks/1
   ```
 
-* Generate CPU load. Last parameter is duration of load in seconds..
+* Generate CPU load. Last parameter is duration of load in seconds
 
   ```
   curl -X GET http://tasks-dev.10.1.2.10.xip.io/demo/load/5 # 5 seconds
   ```
-  

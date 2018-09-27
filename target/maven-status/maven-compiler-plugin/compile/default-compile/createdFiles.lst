@@ -1,4 +1,5 @@
 org/jboss/as/quickstarts/tasksrs/service/TaskResource.class
+org/jboss/as/quickstarts/tasksrs/service/App.class
 org/jboss/as/quickstarts/tasksrs/model/TaskDao.class
 org/jboss/as/quickstarts/tasksrs/service/UserResource.class
 org/jboss/as/quickstarts/tasksrs/model/UserDao.class

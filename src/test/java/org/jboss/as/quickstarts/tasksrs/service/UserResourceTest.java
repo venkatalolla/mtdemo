@@ -42,7 +42,7 @@ public class UserResourceTest {
 		Mockito.when(userDao.getAll()).thenReturn(users);
 	}
 
-	/*@Test
+	@Test
 	// TODO: comment out to make the test run
 	@Ignore
 	public void getUsersSortedByTask() {
@@ -54,7 +54,7 @@ public class UserResourceTest {
 		assertEquals("user3", users.get(1).getUsername());
 		assertEquals("user1", users.get(2).getUsername());
 		
-	}*/
+	}
 	
 
 	// helper methods

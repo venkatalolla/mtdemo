@@ -10,15 +10,7 @@
     <classes>
       <class name="org.junit.runner.Description">
         <methods>
-          <include name="all_tasks_should_be_obtained_from_detachedUser"/>
-          <include name="taskDao_should_provide_basic_case_insensitive_full_text_search"/>
           <include name="getUsersSortedByTask"/>
-          <include name="user_should_be_created_with_one_task_attached"/>
-          <include name="taskDao_should_remove_task_from_detachedUser"/>
-          <include name="userDao_should_return_null_when_searching_for_non_existent_user"/>
-          <include name="user_should_be_retrievable_from_userDao_by_username"/>
-          <include name="range_of_tasks_should_be_provided_by_taskDao"/>
-          <include name="userDao_should_create_user_so_it_could_be_retrieved_from_userDao_by_username"/>
         </methods>
       </class> <!-- org.junit.runner.Description -->
     </classes>

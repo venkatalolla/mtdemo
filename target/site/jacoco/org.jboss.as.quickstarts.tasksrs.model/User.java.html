@@ -51,9 +51,9 @@ public class User implements Serializable {
     @Column(unique = true)
     private String username;
 
-    @OneToMany(cascade = ALL, mappedBy = &quot;owner&quot;)
+<span class="pc" id="L54">    @OneToMany(cascade = ALL, mappedBy = &quot;owner&quot;)</span>
     @Column(updatable = false)
-<span class="pc" id="L56">    private List&lt;Task&gt; tasks = new ArrayList&lt;Task&gt;();</span>
+    private List&lt;Task&gt; tasks = new ArrayList&lt;Task&gt;();
 
 <span class="nc" id="L58">    public User() {</span>
 <span class="nc" id="L59">    }</span>

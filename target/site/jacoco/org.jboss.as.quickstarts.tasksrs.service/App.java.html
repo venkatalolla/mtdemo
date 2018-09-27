@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JBoss EAP - Tasks JAX-RS App</a> &gt; <a href="index.source.html" class="el_package">org.jboss.as.quickstarts.tasksrs.service</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2014, Red Hat, Inc. and/or its affiliates, and individual
+ * contributors by the @authors tag. See the copyright.txt in the
+ * distribution for a full listing of individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.jboss.as.quickstarts.tasksrs.service;
+
+import java.net.URI;
+import java.security.Principal;
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.DefaultValue;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
+import javax.ws.rs.core.UriBuilder;
+import javax.ws.rs.core.UriInfo;
+
+import org.jboss.as.quickstarts.tasksrs.model.Task;
+import org.jboss.as.quickstarts.tasksrs.model.TaskDao;
+import org.jboss.as.quickstarts.tasksrs.model.User;
+import org.jboss.as.quickstarts.tasksrs.model.UserDao;
+
+/**
+ * A JAX-RS resource for exposing REST endpoints for Task manipulation
+ */
+@Path(&quot;/&quot;)
+<span class="nc" id="L47">public class App {</span>
+    @Inject
+    private UserDao userDao;
+
+    @Inject
+    private TaskDao taskDao;
+
+    @POST
+    @Path(&quot;tasks/{title}&quot;)
+    public Response createTask(@Context UriInfo info, @Context SecurityContext context,
+                               @PathParam(&quot;title&quot;)  @DefaultValue(&quot;task&quot;) String taskTitle) {
+<span class="nc" id="L58">        User user = getUser(context);</span>
+<span class="nc" id="L59">        Task task = new Task(taskTitle);</span>
+
+<span class="nc" id="L61">        taskDao.createTask(user, task);</span>
+
+        // Construct the URI for the newly created resource and put in into the Location header of the response
+        // (assumes that there is only one occurrence of the task title in the request)
+<span class="nc" id="L65">        String rawPath = info.getAbsolutePath().getRawPath().replace(task.getTitle(), task.getId().toString());</span>
+<span class="nc" id="L66">        UriBuilder uriBuilder = info.getAbsolutePathBuilder().replacePath(rawPath);</span>
+<span class="nc" id="L67">        URI uri = uriBuilder.build();</span>
+
+<span class="nc" id="L69">        return Response.created(uri).build();</span>
+    }
+
+    @DELETE
+    @Path(&quot;tasks/{id}&quot;)
+    public void deleteTaskById(@Context SecurityContext context, @PathParam(&quot;id&quot;) Long id) {
+<span class="nc" id="L75">        Task task = getTaskById(context, id);</span>
+
+<span class="nc" id="L77">        taskDao.deleteTask(task);</span>
+<span class="nc" id="L78">    }</span>
+
+    @GET
+    @Path(&quot;tasks/{id}&quot;)
+    @Produces({ &quot;application/xml&quot;, &quot;application/json&quot; })
+    public Task getTaskById(@Context SecurityContext context, @PathParam(&quot;id&quot;) Long id) {
+<span class="nc" id="L84">        User user = getUser(context);</span>
+
+<span class="nc" id="L86">        return getTask(user, id);</span>
+    }
+
+    @GET
+    @Path(&quot;tasks/{title}&quot;)
+    @Produces({ &quot;application/xml&quot;, &quot;application/json&quot; })
+    public List&lt;Task&gt; getTasksByTitle(@Context SecurityContext context, @PathParam(&quot;title&quot;) String title) {
+<span class="nc" id="L93">        return getTasks(getUser(context), title);</span>
+    }
+
+    @GET
+    @Path(&quot;tasks&quot;)
+    @Produces({ &quot;application/xml&quot;, &quot;application/json&quot; })
+    public List&lt;Task&gt; getTasks(@Context SecurityContext context) {
+<span class="nc" id="L100">        return getTasks(getUser(context));</span>
+    }
+
+    // Utility Methods
+
+    private List&lt;Task&gt; getTasks(User user, String title) {
+<span class="nc" id="L106">        return taskDao.getForTitle(user, title);</span>
+    }
+
+    private List&lt;Task&gt; getTasks(User user) {
+<span class="nc" id="L110">        return taskDao.getAll(user);</span>
+    }
+
+    private Task getTask(User user, Long id) {
+<span class="nc bnc" id="L114" title="All 2 branches missed.">        for (Task task : taskDao.getAll(user))</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">            if (task.getId().equals(id))</span>
+<span class="nc" id="L116">                return task;</span>
+
+<span class="nc" id="L118">        throw new WebApplicationException(Response.Status.NOT_FOUND);</span>
+    }
+
+    private User getUser(SecurityContext context) {
+<span class="nc" id="L122">        Principal principal = null;</span>
+
+<span class="nc bnc" id="L124" title="All 2 branches missed.">        if (context != null)</span>
+<span class="nc" id="L125">            principal = context.getUserPrincipal();</span>
+
+<span class="nc bnc" id="L127" title="All 2 branches missed.">        if (principal == null)</span>
+<span class="nc" id="L128">            throw new WebApplicationException(Response.Status.UNAUTHORIZED);</span>
+
+<span class="nc" id="L130">        return getUser(principal.getName());</span>
+    }
+
+    private User getUser(String username) {
+
+        try {
+<span class="nc" id="L136">            User user = userDao.getForUsername(username);</span>
+
+<span class="nc bnc" id="L138" title="All 2 branches missed.">            if (user == null) {</span>
+<span class="nc" id="L139">                user = new User(username);</span>
+
+<span class="nc" id="L141">                userDao.createUser(user);</span>
+            }
+
+<span class="nc" id="L144">            return user;</span>
+<span class="nc" id="L145">        } catch (Exception e) {</span>
+<span class="nc" id="L146">            throw new WebApplicationException(e);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

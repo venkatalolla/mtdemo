@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,  1 skipped,  3 passed</span>
+                    <span class="method-stats">7 methods,  1 skipped,  6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -121,7 +121,22 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jboss.as.quickstarts.tasksrs.service.AppTest" hash-for-method="createTaskWithNewUser">createTaskWithNewUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jboss.as.quickstarts.tasksrs.service.AppTest" hash-for-method="deleteTaskById">deleteTaskById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest" hash-for-method="deleteTaskById">deleteTaskById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.jboss.as.quickstarts.tasksrs.service.AppTest" hash-for-method="getTaskByIdWithNonExistingUser">getTaskByIdWithNonExistingUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -156,6 +171,35 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.jboss.as.quickstarts.tasksrs.service.AppTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createTaskWithNewUser">
+                  </a> <!-- createTaskWithNewUser -->
+                  <span class="method-name">createTaskWithNewUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteTaskById">
+                  </a> <!-- deleteTaskById -->
+                  <span class="method-name">deleteTaskById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTaskByIdWithNonExistingUser">
+                  </a> <!-- getTaskByIdWithNonExistingUser -->
+                  <span class="method-name">getTaskByIdWithNonExistingUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -209,6 +253,7 @@
       &lt;class name=&quot;org.jboss.as.quickstarts.tasksrs.UserDaoTest&quot;/&gt;
       &lt;class name=&quot;org.jboss.as.quickstarts.tasksrs.TaskDaoTest&quot;/&gt;
       &lt;class name=&quot;org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest&quot;/&gt;
+      &lt;class name=&quot;org.jboss.as.quickstarts.tasksrs.service.AppTest&quot;/&gt;
       &lt;class name=&quot;org.jboss.as.quickstarts.tasksrs.service.UserResourceTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
@@ -223,7 +268,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (4 classes)</span>
+                <span class="test-name">Surefire test (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -249,28 +294,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'deleteTaskById')
-data.setCell(0, 2, 'org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest')
-data.setCell(0, 3, 642);
+data.setCell(0, 2, 'org.jboss.as.quickstarts.tasksrs.service.AppTest')
+data.setCell(0, 3, 3306);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'getTaskByIdWithNonExistingUser')
-data.setCell(1, 2, 'org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest')
-data.setCell(1, 3, 639);
+data.setCell(1, 2, 'org.jboss.as.quickstarts.tasksrs.service.AppTest')
+data.setCell(1, 3, 3303);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createTaskWithNewUser')
+data.setCell(2, 1, 'deleteTaskById')
 data.setCell(2, 2, 'org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest')
-data.setCell(2, 3, 635);
+data.setCell(2, 3, 676);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'getUsersSortedByTask')
-data.setCell(3, 2, 'org.jboss.as.quickstarts.tasksrs.service.UserResourceTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'getTaskByIdWithNonExistingUser')
+data.setCell(3, 2, 'org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest')
+data.setCell(3, 3, 673);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'createTaskWithNewUser')
+data.setCell(4, 2, 'org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest')
+data.setCell(4, 3, 669);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'createTaskWithNewUser')
+data.setCell(5, 2, 'org.jboss.as.quickstarts.tasksrs.service.AppTest')
+data.setCell(5, 3, 4);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'getUsersSortedByTask')
+data.setCell(6, 2, 'org.jboss.as.quickstarts.tasksrs.service.UserResourceTest')
+data.setCell(6, 3, 0);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -296,63 +353,40 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.jboss.as.quickstarts.tasksrs.UserDaoTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">user_should_be_retrievable_from_userDao_by_username</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">userDao_should_return_null_when_searching_for_non_existent_user</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">userDao_should_create_user_so_it_could_be_retrieved_from_userDao_by_username</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">org.jboss.as.quickstarts.tasksrs.TaskDaoTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">user_should_be_created_with_one_task_attached</span>
-                <span class="method-start">453 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">all_tasks_should_be_obtained_from_detachedUser</span>
-                <span class="method-start">453 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">range_of_tasks_should_be_provided_by_taskDao</span>
-                <span class="method-start">453 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">taskDao_should_provide_basic_case_insensitive_full_text_search</span>
-                <span class="method-start">454 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">taskDao_should_remove_task_from_detachedUser</span>
-                <span class="method-start">454 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">org.jboss.as.quickstarts.tasksrs.service.TaskResourceTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">createTaskWithNewUser</span>
-                <span class="method-start">552 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getTaskByIdWithNonExistingUser</span>
-                <span class="method-start">552 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">deleteTaskById</span>
-                <span class="method-start">552 ms</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.jboss.as.quickstarts.tasksrs.service.AppTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">createTaskWithNewUser</span>
+                <span class="method-start">680 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getTaskByIdWithNonExistingUser</span>
+                <span class="method-start">680 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteTaskById</span>
+                <span class="method-start">680 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.jboss.as.quickstarts.tasksrs.service.UserResourceTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">getUsersSortedByTask</span>
-                <span class="method-start">1196 ms</span>
+                <span class="method-start">3989 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

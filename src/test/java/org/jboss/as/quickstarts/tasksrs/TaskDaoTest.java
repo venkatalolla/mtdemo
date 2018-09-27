@@ -28,7 +28,7 @@ import javax.persistence.EntityManager;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.junit.InSequence;
-import org.jboss.as.quickstarts.tasksrs.category.IntegrationTest;
+//import org.jboss.as.quickstarts.tasksrs.category.IntegrationTest;
 import org.jboss.as.quickstarts.tasksrs.model.*;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Before;
@@ -41,14 +41,14 @@ import org.junit.runner.RunWith;
  * @author Oliver Kiss
  */
 @RunWith(Arquillian.class)
-@Category(IntegrationTest.class)
-public class TaskDaoTest {
+//@Category(IntegrationTest.class)
+public class TaskDaoTest {/*
 
-    /*@Deployment
+    @Deployment
     public static WebArchive deployment() throws IllegalArgumentException, FileNotFoundException {
         return new DefaultDeployment().withPersistence().withImportedData().getArchive()
                 .addClasses(Resources.class, User.class, UserDao.class, Task.class, TaskDao.class, TaskDaoImpl.class);
-    }*/
+    }
 
     @Inject
     private EntityManager em;
@@ -64,7 +64,7 @@ public class TaskDaoTest {
         detachedUser.setId(1L);
     }
 
-    /*@Test
+    @Test
     @InSequence(1)
     public void user_should_be_created_with_one_task_attached() throws Exception {
         // given
@@ -134,5 +134,5 @@ public class TaskDaoTest {
 
         // then
         assertEquals(1, taskDao.getAll(detachedUser).size());
-    }*/
-}
+    }
+*/}

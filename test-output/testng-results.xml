@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Example test run" duration-ms="2433" started-at="2018-09-27T02:03:09Z" finished-at="2018-09-27T02:03:11Z">
+  <suite name="Default suite" duration-ms="2644" started-at="2018-09-27T03:41:15Z" finished-at="2018-09-27T03:41:18Z">
     <groups>
     </groups>
-    <test name="Simple Test" duration-ms="2433" started-at="2018-09-27T02:03:09Z" finished-at="2018-09-27T02:03:11Z">
+    <test name="Default test" duration-ms="2644" started-at="2018-09-27T03:41:15Z" finished-at="2018-09-27T03:41:18Z">
       <class name="org.jboss.as.quickstarts.tasksrs.service.AppTest">
-        <test-method status="PASS" signature="createAndStartService()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="createAndStartService" is-config="true" duration-ms="617" started-at="2018-09-27T02:03:09Z" finished-at="2018-09-27T02:03:10Z">
+        <test-method status="PASS" signature="createAndStartService()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="createAndStartService" is-config="true" duration-ms="643" started-at="2018-09-27T03:41:15Z" finished-at="2018-09-27T03:41:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAndStartService -->
-        <test-method status="PASS" signature="testSetUp()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="testSetUp" is-config="true" duration-ms="619" started-at="2018-09-27T02:03:10Z" finished-at="2018-09-27T02:03:10Z">
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="testSetUp" is-config="true" duration-ms="775" started-at="2018-09-27T03:41:16Z" finished-at="2018-09-27T03:41:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetUp -->
-        <test-method status="PASS" signature="verifyOpenShiftTasksPageTittle()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="verifyOpenShiftTasksPageTittle" duration-ms="619" started-at="2018-09-27T02:03:10Z" finished-at="2018-09-27T02:03:11Z">
+        <test-method status="PASS" signature="verifyOpenShiftTasksPageTittle()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="verifyOpenShiftTasksPageTittle" duration-ms="648" started-at="2018-09-27T03:41:17Z" finished-at="2018-09-27T03:41:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOpenShiftTasksPageTittle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="tearDown" is-config="true" duration-ms="564" started-at="2018-09-27T02:03:11Z" finished-at="2018-09-27T02:03:11Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.jboss.as.quickstarts.tasksrs.service.AppTest@701fc37a]" name="tearDown" is-config="true" duration-ms="563" started-at="2018-09-27T03:41:17Z" finished-at="2018-09-27T03:41:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.jboss.as.quickstarts.tasksrs.service.AppTest -->
-    </test> <!-- Simple Test -->
-  </suite> <!-- Example test run -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
