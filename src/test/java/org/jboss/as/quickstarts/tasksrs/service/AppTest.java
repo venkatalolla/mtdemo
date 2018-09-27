@@ -101,7 +101,7 @@ public class AppTest {
 
 	@Test
 	public void getTaskByIdWithNonExistingUser() {
-		System.out.println("Printing here");
+		System.out.println("Launching Chrome Browser");
 		service = new ChromeDriverService.Builder().usingDriverExecutable(new File(CHROME_PATH)).usingAnyFreePort().build();
 		try {
 			service.start();
@@ -116,10 +116,12 @@ public class AppTest {
 		chromeOptions.addArguments("--disable-dev-shm-usage");
 		driver = new ChromeDriver(service, chromeOptions);
 		
+		System.out.println("Running Selenium Test Case");
 		driver.navigate().to(appURL);
 		String getTitle = driver.getTitle();
 		Assert.assertEquals(getTitle, "OpenShift Demo Tasks");
 		
+		System.out.println("Exiting Chrome Browser");
 		driver.quit();
 		
 		when(taskDao.getAll(any(User.class))).thenReturn(asList(newTask(123L)));
