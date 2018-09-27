@@ -23,13 +23,13 @@ REST Endpoints on OpenShift..,.
   curl -i -u 'redhat:redhat1!' -H "Content-Length: 0" -X POST http://tasks-dev.10.1.2.10.xip.io/ws/tasks/task1
   ```
 
-* Get a task by id
+* Get a task by id.
 
   ```
   curl -u 'redhat:redhat1!' -H "Accept: application/json" -X GET http://tasks-dev.10.1.2.10.xip.io/ws/tasks/1
   ```
 
-* Get all user tasks
+* Get all user tasks.
 
   ```
 
