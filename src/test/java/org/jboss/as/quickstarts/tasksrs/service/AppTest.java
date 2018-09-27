@@ -3,6 +3,8 @@ package org.jboss.as.quickstarts.tasksrs.service;
 import java.io.File;
 import java.io.IOException;
 
+import org.jboss.as.quickstarts.tasksrs.category.UnitTest;
+import org.junit.experimental.categories.Category;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -12,6 +14,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+@Category(UnitTest.class)
 public class AppTest {
 
 	private static final String CHROME_PATH = "/usr/bin/chromedriver";
